@@ -1,20 +1,25 @@
-inscription = {}
-inscription["nom"] = input("Ecrivez le nom")
-inscription["prenom"] = input("Ecrivez le prénom")
-inscription["year"] = int(input("Ecrivez année de naissance"))
+def age(annee):
+    return 2022-annee
 
 poussin = []
 cadet = []
 junior = []
 semipro = []
 pro = []
+mailtemplate = "@baton-rouge.fr"
+mail = ""
+inscription = {}
+inscription["nom"] = input("Ecrivez le nom")
+inscription["prenom"] = input("Ecrivez le prénom")
+inscription["year"] = int(input("Ecrivez année de naissance"))
 
-continuer = True
-
-while continuer:
-
-def age(annee):
-    return 2022-annee
+firstLetter = inscription["nom"][0]
+mail = ""
+mail += firstLetter.upper()
+mail += "."
+secondLetter = inscription["prenom"]
+mail += secondLetter.lower()
+mail += mailtemplate
 
 
 if 6 <= age(inscription["year"]) < 12:
@@ -33,7 +38,7 @@ else:
 
 
 
-
+print(mail)
 print(poussin)
 print(age(inscription["year"]))
 
