@@ -1,7 +1,4 @@
-inscription = {}
-inscription["nom"] = input("Ecrivez le nom")
-inscription["prenom"] = input("Ecrivez le prénom")
-inscription["year"] = int(input("Ecrivez année de naissance"))
+from mesfonctions import *
 
 poussin = []
 cadet = []
@@ -9,12 +6,13 @@ junior = []
 semipro = []
 pro = []
 
-continuer = True
 
-while continuer:
+inscription = {}
+inscription["nom"] = input("Ecrivez le nom")
+inscription["prenom"] = input("Ecrivez le prénom")
+inscription["year"] = int(input("Ecrivez année de naissance"))
 
-def age(annee):
-    return 2022-annee
+email = Mail(inscription["nom"][0],inscription["prenom"])
 
 
 if 6 <= age(inscription["year"]) < 12:
@@ -33,13 +31,11 @@ else:
 
 
 
-
+print(email)
 print(poussin)
 print(age(inscription["year"]))
 
 
-#print(inscription)
 
-#print(inscription["year"])
 
 
