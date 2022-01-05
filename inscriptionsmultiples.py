@@ -9,8 +9,17 @@ for i in range (inscrits):
     inscription = {}
     inscription["nom"] = input("Ecrivez le nom\n")
     inscription["prenom"] = input("Ecrivez le prénom\n")
-    inscription["year"] = int(input("Ecrivez année de naissance\n"))
+    continuer = True
+    while continuer:
+        inscription["year"] = input("Ecrivez année de naissance\n")
+        try:
+            inscription["year"] = int(inscription["year"])
+        except ValueError:
+            print("veuillez indiquer l'année en chiffres")
+        else:
+            continuer = False
 
+    #inscription["year"] = int(input("Ecrivez année de naissance\n"))
     email = Mail(inscription["nom"][0], inscription["prenom"])
     inscription["email"] = email
 
@@ -26,6 +35,7 @@ for i in range (inscrits):
         leslistes["pro"].append(inscription)
     else:
         print("NON ADMIS")
+
 
 
 print(leslistes)
