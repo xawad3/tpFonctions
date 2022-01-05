@@ -9,7 +9,9 @@ junior = []
 semipro = []
 pro = []
 
+continuer = True
 
+while continuer:
 
 def age(annee):
     return 2022-annee
@@ -27,6 +29,9 @@ elif 30 <= age(inscription["year"]) <= 40:
     pro.append(inscription)
 else:
     print("NON ADMIS")
+
+
+
 
 
 print(poussin)
