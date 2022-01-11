@@ -1,5 +1,6 @@
 from mesfonctions import *
 import datetime
+import csv
 
 
 
@@ -46,7 +47,26 @@ while inscrire:
     else:
         print("NON ADMIS")
 
+    f = open("quidditch.csv", "w")
+    #f.write(leslistes["poussins"])
+    #f.write(leslistes["cadets"])
+    #f.write(leslistes["junior"])
+    #f.write(leslistes["semipro"])
+    #f.write(leslistes["pro"])
 
+
+
+    for i in leslistes:
+        print(i)
+        for j in leslistes[i]:
+            print(j)
+            
+            for k in j:
+                print(k)
+                f.write(str(j[k]))
+
+
+    f.close()
 
     ok = input("il y a t-il encore une entrée, o/n ?")
     if ok == "o":
