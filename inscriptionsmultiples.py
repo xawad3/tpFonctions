@@ -60,7 +60,7 @@ while inscrire:
         print(i)
         for j in leslistes[i]:
             print(j)
-            
+
             for k in j:
                 print(k)
                 f.write(str(j[k]))
