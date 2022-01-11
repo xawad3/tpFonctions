@@ -8,9 +8,9 @@ pro = []
 
 
 inscription = {}
-inscription["nom"] = input("Ecrivez le nom")
-inscription["prenom"] = input("Ecrivez le prénom")
-inscription["year"] = int(input("Ecrivez année de naissance"))
+inscription["nom"] = input("Ecrivez le nom\n")
+inscription["prenom"] = input("Ecrivez le prénom\n")
+inscription["year"] = int(input("Ecrivez année de naissance\n"))
 
 email = Mail(inscription["nom"][0],inscription["prenom"])
 
