@@ -1,11 +1,21 @@
 from mesfonctions import *
+import datetime
 
-inscrits = int(input("indiquez le nombre de personnes à inscrire\n"))
 
+
+
+
+#inscrits = int(input("indiquez le nombre de personnes à inscrire\n"))
+
+
+#for i in range (inscrits):
 leslistes = {"poussins":[],"cadets":[],"junior":[],"semipro": [],"pro":[]}
 
 
-for i in range (inscrits):
+inscrire = True
+while inscrire:
+
+
     inscription = {}
     inscription["nom"] = input("Ecrivez le nom\n")
     inscription["prenom"] = input("Ecrivez le prénom\n")
@@ -19,7 +29,7 @@ for i in range (inscrits):
         else:
             continuer = False
 
-    #inscription["year"] = int(input("Ecrivez année de naissance\n"))
+
     email = Mail(inscription["nom"][0], inscription["prenom"])
     inscription["email"] = email
 
@@ -35,6 +45,16 @@ for i in range (inscrits):
         leslistes["pro"].append(inscription)
     else:
         print("NON ADMIS")
+
+
+
+    ok = input("il y a t-il encore une entrée, o/n ?")
+    if ok == "o":
+        inscrire = True
+
+    else:
+        inscrire = False
+
 
 
 
