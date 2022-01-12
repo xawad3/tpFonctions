@@ -5,10 +5,6 @@ from datetime import date
 print("Il y a un nouveau joueur de quidditch ? Dites nous tout !")
 print("——————————————————————————————————————————————————————————")
 
-#inscrits = int(input("indiquez le nombre de personnes à inscrire\n"))
-
-
-#for i in range (inscrits):
 leslistes = {"poussins":[],"cadets":[],"junior":[],"semipro": [],"pro":[]}
 
 
@@ -48,7 +44,6 @@ while inscrire:
 
     date_ = str(date.today())
     create_csv("inscrits-" + date_ + ".csv", leslistes)
-
 
     ok = input("il y a t-il encore une entrée, o/n ?")
     if ok == "o":

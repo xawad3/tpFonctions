@@ -18,5 +18,7 @@ def create_csv(fichier,leslistes):
         spamwriter = csv.writer(csvfile, delimiter=" ")
         for i in leslistes:
             for j in leslistes[i]:
+                utilisateur = []
                 for k in j:
-                    spamwriter.writerow(str(j[k]))
+                    utilisateur.append(str(j[k]))
+                spamwriter.writerow([utilisateur[0], utilisateur[1], utilisateur[2], utilisateur[3], i])
