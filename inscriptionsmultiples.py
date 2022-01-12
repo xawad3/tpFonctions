@@ -1,10 +1,9 @@
 from mesfonctions import *
-import datetime
-import csv
+from datetime import date
 
 
-
-
+print("Il y a un nouveau joueur de quidditch ? Dites nous tout !")
+print("——————————————————————————————————————————————————————————")
 
 #inscrits = int(input("indiquez le nombre de personnes à inscrire\n"))
 
@@ -47,26 +46,9 @@ while inscrire:
     else:
         print("NON ADMIS")
 
-    f = open("quidditch.csv", "w")
-    #f.write(leslistes["poussins"])
-    #f.write(leslistes["cadets"])
-    #f.write(leslistes["junior"])
-    #f.write(leslistes["semipro"])
-    #f.write(leslistes["pro"])
+    date_ = str(date.today())
+    create_csv("inscrits-" + date_ + ".csv", leslistes)
 
-
-
-    for i in leslistes:
-        print(i)
-        for j in leslistes[i]:
-            print(j)
-
-            for k in j:
-                print(k)
-                f.write(str(j[k]))
-
-
-    f.close()
 
     ok = input("il y a t-il encore une entrée, o/n ?")
     if ok == "o":
@@ -77,5 +59,5 @@ while inscrire:
 
 
 
-
+print("Voici les nouveaux inscrits:")
 print(leslistes)
